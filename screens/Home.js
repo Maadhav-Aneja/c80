@@ -12,6 +12,13 @@ import {
 } from "react-native";
 
 export default class HomeScreen extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+
+        };
+    }
+
     render() {
         return (
             <View style={styles.container}>
@@ -20,7 +27,6 @@ export default class HomeScreen extends Component {
                     <View style={styles.titleBar}>
                         <Text style={styles.titleText}>ISS Tracker App</Text>
                     </View>
-
                     <TouchableOpacity style={styles.routeCard} onPress={() =>
                         this.props.navigation.navigate("IssLocation")
                     }>
@@ -29,7 +35,6 @@ export default class HomeScreen extends Component {
                         <Text style={styles.bgDigit}>1</Text>
                         <Image source={require("../assets/iss_icon.png")} style={styles.iconImage}></Image>
                     </TouchableOpacity>
-
                     <TouchableOpacity style={styles.routeCard} onPress={() =>
                         this.props.navigation.navigate("Meteors")
                     }>
@@ -38,10 +43,9 @@ export default class HomeScreen extends Component {
                         <Text style={styles.bgDigit}>2</Text>
                         <Image source={require("../assets/meteor_icon.png")} style={styles.iconImage}></Image>
                     </TouchableOpacity>
-
                 </ImageBackground>
             </View>
-        )
+        );
     }
 }
 
